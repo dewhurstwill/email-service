@@ -1,0 +1,1 @@
+export const REQUIRED_VARS: string[] = ['SENDGRID_API_KEY', 'SENDGRID_FROM_ADDRESS'];

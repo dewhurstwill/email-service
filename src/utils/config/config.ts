@@ -1,4 +1,12 @@
 import path from 'path';
+import { REQUIRED_VARS as requiredVars } from '../constants';
+
+requiredVars.forEach((variable) => {
+  if (!process.env[variable]) {
+    console.error(`[Startup Error] ${variable} is a required environment variable`);
+    process.exit(1);
+  }
+});
 
 const config = {
   app: {
